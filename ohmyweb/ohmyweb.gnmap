@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Apr  7 10:59:44 2023 as: nmap -sC -sV -oA ohmyweb 10.10.129.118
+Host: 10.10.129.118 ()	Status: Up
+Host: 10.10.129.118 ()	Ports: 22/closed/tcp//ssh///, 80/closed/tcp//http///	Ignored State: filtered (998)
+# Nmap done at Fri Apr  7 11:00:01 2023 -- 1 IP address (1 host up) scanned in 17.17 seconds

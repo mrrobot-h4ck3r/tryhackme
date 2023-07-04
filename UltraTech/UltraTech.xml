@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Feb 16 22:19:28 2023 as: nmap -p- -oA UltraTech 10.10.156.228 -->
+<nmaprun scanner="nmap" args="nmap -p- -oA UltraTech 10.10.156.228" start="1676566168" startstr="Thu Feb 16 22:19:28 2023" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.156.228" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>

@@ -1,0 +1,14 @@
+# Nmap 7.92 scan initiated Sat Apr 15 11:59:48 2023 as: nmap -sC -sV -oA owasp 10.10.82.12
+Nmap scan report for 10.10.82.12
+Host is up (0.16s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 e1:89:3d:d8:82:e4:02:1a:69:d6:d5:c6:b5:91:56:57 (RSA)
+|   256 46:13:9a:12:94:84:04:18:f1:ab:46:60:d7:9c:c7:66 (ECDSA)
+|_  256 54:c8:f5:38:b4:1d:4f:ae:8c:d0:35:a6:de:41:9d:48 (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 15 11:59:58 2023 -- 1 IP address (1 host up) scanned in 10.05 seconds

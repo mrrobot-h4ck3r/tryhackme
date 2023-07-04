@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Wed Apr 12 16:21:02 2023 as: nmap -sC -sV -oA opacity 10.10.74.11
+Host: 10.10.74.11 ()	Status: Up
+Host: 10.10.74.11 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/, 139/open/tcp//netbios-ssn//Samba smbd 4.6.2/, 445/open/tcp//netbios-ssn//Samba smbd 4.6.2/	Ignored State: closed (996)
+# Nmap done at Wed Apr 12 16:21:22 2023 -- 1 IP address (1 host up) scanned in 19.69 seconds
