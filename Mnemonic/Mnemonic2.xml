@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Apr 23 20:10:32 2023 as: nmap -sC -sV -p- -oA Mnemonic2 10.10.255.225 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -oA Mnemonic2 10.10.255.225" start="1682260832" startstr="Sun Apr 23 20:10:32 2023" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.255.225" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="SYN Stealth Scan" time="1682260956" percent="4.64" remaining="2528" etc="1682263484"/>
+<taskprogress task="SYN Stealth Scan" time="1682260957" percent="4.64" remaining="2548" etc="1682263504"/>
+<taskprogress task="SYN Stealth Scan" time="1682260959" percent="4.64" remaining="2587" etc="1682263546"/>
+<taskprogress task="SYN Stealth Scan" time="1682261018" percent="4.73" remaining="3723" etc="1682264740"/>
+<taskprogress task="SYN Stealth Scan" time="1682261019" percent="4.74" remaining="3742" etc="1682264760"/>

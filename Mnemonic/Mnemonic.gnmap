@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Apr 23 20:05:38 2023 as: nmap -sC -sV -oA Mnemonic 10.10.255.225
+Host: 10.10.255.225 ()	Status: Up
+Host: 10.10.255.225 ()	Ports: 21/open/tcp//ftp//vsftpd 3.0.3/, 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/	Ignored State: closed (998)
+# Nmap done at Sun Apr 23 20:10:09 2023 -- 1 IP address (1 host up) scanned in 270.57 seconds

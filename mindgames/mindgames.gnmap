@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Wed Apr 12 15:52:53 2023 as: nmap -sC -sV -oA mindgames 10.10.185.24
+Host: 10.10.185.24 ()	Status: Up
+Host: 10.10.185.24 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Golang net|http server (Go-IPFS json-rpc or InfluxDB API)/	Ignored State: closed (998)
+# Nmap done at Wed Apr 12 15:53:18 2023 -- 1 IP address (1 host up) scanned in 24.51 seconds

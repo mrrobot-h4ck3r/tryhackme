@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Sun Apr 23 20:10:32 2023 as: nmap -sC -sV -p- -oA Mnemonic2 10.10.255.225
