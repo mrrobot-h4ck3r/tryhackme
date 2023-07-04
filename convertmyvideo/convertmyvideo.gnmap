@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Apr 23 11:22:43 2023 as: nmap -sC -sV -oA convertmyvideo 10.10.118.40
+Host: 10.10.118.40 ()	Status: Up
+Host: 10.10.118.40 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/	Ignored State: closed (998)
+# Nmap done at Sun Apr 23 11:28:06 2023 -- 1 IP address (1 host up) scanned in 323.70 seconds
