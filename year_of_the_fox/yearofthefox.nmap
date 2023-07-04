@@ -1,0 +1,72 @@
+# Nmap 7.92 scan initiated Sun Jun  4 00:38:26 2023 as: nmap -A -v -p- -T4 -oA yearofthefox 10.10.142.34
+Increasing send delay for 10.10.142.34 from 0 to 5 due to 957 out of 2392 dropped probes since last increase.
+Increasing send delay for 10.10.142.34 from 5 to 10 due to 12 out of 29 dropped probes since last increase.
+Nmap scan report for 10.10.142.34
+Host is up (0.15s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT    STATE SERVICE     VERSION
+80/tcp  open  http        Apache httpd 2.4.29
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: 401 Unauthorized
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=You want in? Gotta guess the password!
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: YEAROFTHEFOX)
+445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu (workgroup: YEAROFTHEFOX)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=6/4%OT=80%CT=1%CU=42124%PV=Y%DS=2%DC=T%G=Y%TM=647B935A
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)OPS(
+OS:O1=M505ST11NW6%O2=M505ST11NW6%O3=M505NNT11NW6%O4=M505ST11NW6%O5=M505ST11
+OS:NW6%O6=M505ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(
+OS:R=Y%DF=Y%T=40%W=F507%O=M505NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T
+OS:=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=
+OS:S)
+
+Uptime guess: 37.771 days (since Thu Apr 27 06:23:28 2023)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts: year-of-the-fox.lan, YEAR-OF-THE-FOX
+
+Host script results:
+|_clock-skew: mean: -20m00s, deviation: 34m38s, median: 0s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2023-06-03T19:24:05
+|_  start_date: N/A
+| nbstat: NetBIOS name: YEAR-OF-THE-FOX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   YEAR-OF-THE-FOX<00>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<03>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<20>  Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   YEAROFTHEFOX<00>     Flags: <group><active>
+|   YEAROFTHEFOX<1d>     Flags: <unique><active>
+|_  YEAROFTHEFOX<1e>     Flags: <group><active>
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: year-of-the-fox
+|   NetBIOS computer name: YEAR-OF-THE-FOX\x00
+|   Domain name: lan
+|   FQDN: year-of-the-fox.lan
+|_  System time: 2023-06-03T20:24:05+01:00
+
+TRACEROUTE (using port 143/tcp)
+HOP RTT       ADDRESS
+1   164.03 ms 10.9.0.1
+2   164.49 ms 10.10.142.34
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jun  4 00:54:10 2023 -- 1 IP address (1 host up) scanned in 944.09 seconds
