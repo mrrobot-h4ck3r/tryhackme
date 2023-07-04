@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Wed Apr  5 10:35:22 2023 as: nmap -sC -sV -oA hackernote 10.10.124.33
+Host: 10.10.124.33 ()	Status: Up
+Host: 10.10.124.33 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Golang net|http server (Go-IPFS json-rpc or InfluxDB API)/, 8080/open/tcp//http//Golang net|http server (Go-IPFS json-rpc or InfluxDB API)/	Ignored State: closed (997)
+# Nmap done at Wed Apr  5 10:35:56 2023 -- 1 IP address (1 host up) scanned in 34.57 seconds
