@@ -1,0 +1,15 @@
+1) What is the name of the HTTP server running on the remote host?
+
+>>> apache
+
+2) What is the name of the service running on port 22 on the QA server?
+
+>>> ssh
+
+3) What flag can you find after successfully accessing the Samba service?
+
+>>>{THM_SANTA_SMB_SERVER}
+
+4) What is the password for the username santahr?
+
+>>>santa25

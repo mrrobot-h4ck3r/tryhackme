@@ -1,0 +1,19 @@
+1) What is the name of the Registrar for the domain santagift.shop?
+
+
+>>> NAMECHEAP INC
+2) Find the website's source code (repository) on github.com and open the file containing sensitive credentials. Can you find the flag?
+
+>>> {THM_OSINT_WORKS}
+
+3) What is the name of the file containing passwords?
+
+>>>config.php
+
+4) What is the name of the QA server associated with the website?
+
+>>>qa.santagift.shop
+
+5) What is the DB_PASSWORD that is being reused between the QA and PROD environments?
+
+>>>S@nta2022

